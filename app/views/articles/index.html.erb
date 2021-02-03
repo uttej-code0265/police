@@ -1,0 +1,22 @@
+<table>
+    <thead>
+        <tr>
+            <th>Crime Number</th>
+            <br>
+             <br>
+            <th>Section of Law</th>
+            <th>accuse name </th>
+        </tr>
+    </thead>
+
+
+    <tbody>
+    <% @articles.each do |article| %>
+    <tr>
+        <td><%=article.cr_no%></td>
+        <td><%=article.sec_law%> </td>
+        <td><%=article.acc_name%></td>
+    </tr>
+       <% end %>
+    </tbody>
+</table>

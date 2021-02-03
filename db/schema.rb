@@ -13,6 +13,9 @@
 ActiveRecord::Schema.define(version: 2021_02_03_062444) do
 
   create_table "articles", force: :cascade do |t|
+    t.string "cr_no"
+    t.text "sec_law"
+    t.string "acc_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
