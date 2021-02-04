@@ -1,0 +1,25 @@
+<%= form_with scope: :article,url: articles_path, local:true do |f|%>
+<p>
+    <%= f.label :cr_no %>
+    <br>
+    <%= f.text_field :cr_no %>
+</p>
+
+<p>
+    <%= f.label :sec_law %>
+    <br>
+    <%= f.text_area :sec_law %>
+</p>
+
+
+<p>
+    <%= f.label :acc_name %>
+    <br>
+    <%= f.text_area :acc_name %>
+</p>
+
+
+<p>
+    <%= f.submit%>
+</p>
+<% end %>
