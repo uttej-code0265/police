@@ -6,6 +6,7 @@
              <br>
             <th>Section of Law</th>
             <th>accuse name </th>
+            <th colspan=3>actions </th>
         </tr>
     </thead>
 
@@ -16,6 +17,9 @@
         <td><%=article.cr_no%></td>
         <td><%=article.sec_law%> </td>
         <td><%=article.acc_name%></td>
+        <td><%=link_to 'show',article_path(article)%></td>
+        <td><%=link_to 'edit',edit_article_path(article)%></td>
+        <td><%=link_to 'delete',article_path(article),method: :delete%></td>
     </tr>
        <% end %>
     </tbody>
