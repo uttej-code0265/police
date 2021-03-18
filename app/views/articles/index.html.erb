@@ -18,14 +18,14 @@
         <%# <% @disp_count=@disp_count+1 %> %>
     <%# <%end %> %>
     <tr>
-        <%# <td><%=@count+1%></td> %>
+        <td><%=@count+1%></td>
         <td><%=article.cr_no%></td>
         <td><%=article.sec_law%> </td>
         <td><%=article.acc_name%></td>
         <td><%=link_to 'show',article_path(article)%></td>
         <td><%=link_to 'edit',edit_article_path(article)%></td>
         <td><%=link_to 'delete',article_path(article),method: :delete%></td>
-        <%# <td><%=link_to 'disposal',disposal_path(article)%></td> %>
+        <td><%=link_to 'disposal',disposal_path(article) %></td>
     </tr>
        <%@count=@count+1%> 
        <% end %>
@@ -37,5 +37,5 @@
     <br>
     disp_count=<%=@disp_count%>
     <br> %>
-    total_articles=<%=@count
+    total_articles=<%=@count%>
 </p>
