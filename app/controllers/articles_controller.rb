@@ -5,8 +5,8 @@ class ArticlesController < ApplicationController
 
     def index
         @articles= Article.all
-        # @count=0
-        # @disp_count=0
+        @count=0
+        @disp_count=0
     end
 
     def new
