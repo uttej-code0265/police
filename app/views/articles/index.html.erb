@@ -14,9 +14,9 @@
 
     <tbody>
     <% @articles.each do |article| %>
-    <%# <%if article.disp==true%> %>
-        <%# <% @disp_count=@disp_count+1 %> %>
-    <%# <%end %> %>
+    <%if article.disp==true%> %>
+        <% @disp_count=@disp_count+1 %>
+    <%end%>
     <tr>
         <td><%=@count+1%></td>
         <td><%=article.cr_no%></td>
@@ -36,6 +36,6 @@
     <%=link_to 'new Article',new_article_path%>
     <br>
     disp_count=<%=@disp_count%>
-    <br> %>
+    <br> 
     total_articles=<%=@count%>
 </p>
