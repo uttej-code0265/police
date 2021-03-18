@@ -1,7 +1,7 @@
 <table>
     <thead>
         <tr>
-            <%# <th>S.No</th> %>
+            <th>S.No</th>
             <th>Crime Number</th>
             <br>
              <br>
@@ -27,15 +27,15 @@
         <td><%=link_to 'delete',article_path(article),method: :delete%></td>
         <%# <td><%=link_to 'disposal',disposal_path(article)%></td> %>
     </tr>
-       <%# <%@count=@count+1%>  %>
+       <%@count=@count+1%> 
        <% end %>
     </tbody>
 </table>
 
 <p>
     <%=link_to 'new Article',new_article_path%>
-    <%# <br>
+    <br>
     disp_count=<%=@disp_count%>
-    <%# <br> %>
-    <%# total_articles=<%=@count%> %> %>
+    <br> %>
+    total_articles=<%=@count
 </p>

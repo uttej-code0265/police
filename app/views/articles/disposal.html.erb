@@ -1,4 +1,4 @@
-<%# <table>
+<table>
     <thead>
         <tr>
             <th>Crime Number</th>
@@ -12,7 +12,7 @@
 
 
     <tbody>
-    <% @articles.each do |article| %>
+    <% @articles.each do |article|
     <% if article.disp==true%>
     <tr>
         <td><%=article.cr_no%></td>
