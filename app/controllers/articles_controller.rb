@@ -5,6 +5,8 @@ class ArticlesController < ApplicationController
 
     def index
         @articles= Article.all
+        @count=0
+        @disp_count=0
     end
 
     def new
@@ -32,5 +34,19 @@ class ArticlesController < ApplicationController
         @article.destroy
         redirect_to articles_path
     end
+
+    def disposal
+        @article=Article.find(params[:id])
+         @article.disp=true
+         @article.save!
+         @articles=Article.all
+    end
     
+
+    def disp_destroy
+        @article=Article.find(params[:id])
+        @article.disp=false
+        @article.save!
+        redirect_to articles_path
+    end
 end

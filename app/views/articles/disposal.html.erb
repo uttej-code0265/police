@@ -1,41 +1,32 @@
 <table>
     <thead>
         <tr>
-            <th>S.No</th>
             <th>Crime Number</th>
             <br>
              <br>
             <th>Section of Law</th>
             <th>accuse name </th>
-            <th colspan=4>actions </th>
+            <th colspan=3>actions </th>
         </tr>
     </thead>
 
 
     <tbody>
     <% @articles.each do |article| %>
-    <%if article.disp==true%>
-        <% @disp_count=@disp_count+1 %>
-    <%end%>
+    <% if article.disp==true%>
     <tr>
-        <td><%=@count+1%></td>
         <td><%=article.cr_no%></td>
         <td><%=article.sec_law%> </td>
         <td><%=article.acc_name%></td>
         <td><%=link_to 'show',article_path(article)%></td>
-        <td><%=link_to 'edit',edit_article_path(article)%></td>
-        <td><%=link_to 'delete',article_path(article),method: :delete%></td>
+        <td><%=link_to 'delete from disposal',disp_destroy_path%></td>
         <td><%=link_to 'disposal',disposal_path(article)%></td>
     </tr>
-       <%@count=@count+1%> 
+    <%end%>
        <% end %>
     </tbody>
 </table>
 
 <p>
-    <%=link_to 'new Article',new_article_path%>
-    <br>
-    disp_count=<%=@disp_count%>
-    <br>
-    total_articles=<%=@count%>
+    <%=link_to 'index page',articles_path%>
 </p>

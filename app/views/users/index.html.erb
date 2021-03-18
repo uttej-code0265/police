@@ -1,0 +1,21 @@
+<table>
+    <thead>
+        <tr>
+            <th>Id Number</th>
+            <br>
+             <br>
+            <th>Name</th>
+            <th colspan=3>actions </th>
+        </tr>
+    </thead>
+
+
+    <tbody>
+    <% @users.each do |user| %>
+    <tr>
+        <td><%=user.id_no%></td>
+        <td><%=user.name%> </td>
+    </tr>
+       <% end %>
+    </tbody>
+</table>
