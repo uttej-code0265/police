@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   get 'about', to:'pages#about'
   resources 'articles'
   resources 'users'
-  get 'disposal/:id',to:'articles#disposal',as: 'disposal'
-  get 'disp_destroy/:id',to:'articles#disp_destroy',as: 'disp_destroy'
+  # get 'disposal/:id',to:'articles#disposal',as: 'disposal'
+  # get 'disp_destroy/:id',to:'articles#disp_destroy',as: 'disp_destroy'
 end
