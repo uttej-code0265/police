@@ -13,16 +13,16 @@
 
     <tbody>
     <% @articles.each do |article|%>
-    <% if article.disp==true%>
     <tr>
+        <% if article.disp==true%>
         <td><%=article.cr_no%></td>
         <td><%=article.sec_law%> </td>
         <td><%=article.acc_name%></td>
         <td><%=link_to 'show',article_path(article)%></td>
         <td><%=link_to 'delete from disposal',disp_destroy_path%></td>
         <td><%=link_to 'disposal',disposal_path(article)%></td>
+        <%end%>
     </tr>
-    <%end%>
        <% end %>
     </tbody>
 </table>
