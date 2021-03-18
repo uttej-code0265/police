@@ -16,7 +16,7 @@
     <% @articles.each do |article| %>
     <%# <%if article.disp==true%> %>
         <%# <% @disp_count=@disp_count+1 %> %>
-    <%# <%end%> %>
+    <%# <%end %> %>
     <tr>
         <%# <td><%=@count+1%></td> %>
         <td><%=article.cr_no%></td>
@@ -25,7 +25,7 @@
         <td><%=link_to 'show',article_path(article)%></td>
         <td><%=link_to 'edit',edit_article_path(article)%></td>
         <td><%=link_to 'delete',article_path(article),method: :delete%></td>
-        <td><%=link_to 'disposal',disposal_path(article)%></td>
+        <%# <td><%=link_to 'disposal',disposal_path(article)%></td> %>
     </tr>
        <%# <%@count=@count+1%>  %>
        <% end %>
