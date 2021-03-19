@@ -36,9 +36,9 @@ class ArticlesController < ApplicationController
     end
 
     def disposal
-        @article=Article.find(params[:id])
-         @article.disp=true
-         @article.save!
+        # @article=Article.find(params[:id])
+        #  @article.disp=true
+        #  @article.save
          @articles=Article.all
     end
     
