@@ -43,10 +43,10 @@ class ArticlesController < ApplicationController
     end
     
 
-    def disp_destroy
-        @article=Article.find(params[:id])
-        @article.disp=false
-        @article.save!
-        redirect_to articles_path
-    end
+    # def disp_destroy
+    #     @article=Article.find(params[:id])
+    #     @article.disp=false
+    #     @article.save!
+    #     redirect_to articles_path
+    # end
 end
